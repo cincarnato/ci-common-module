@@ -1,6 +1,6 @@
 {
   "name": "@ci-common-module/frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue common",
   "main": "src/index.js",
   "scripts": {
