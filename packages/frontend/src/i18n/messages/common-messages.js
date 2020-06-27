@@ -21,6 +21,7 @@ const baseMessages = {
             export:'Export',
             import: 'Import',
             title:'Title',
+            subtitle:'Subtitle',
             operation: {
                 success: 'Operation success',
                 fail: 'Operation fail'
@@ -49,6 +50,7 @@ const baseMessages = {
             export:'Exportar',
             import: 'Importar',
             title:'Titulo',
+            subtitle:'Subtitulo',
             operation: {
                 success: 'Operación exitosa',
                 fail: 'Operación fallida'
@@ -78,6 +80,7 @@ const baseMessages = {
             export:'Exportar',
             import: 'Importar',
             title:'Título',
+            subtitle:'Subtítulo',
             operation: {
                 success: 'Operação bem sucedida',
                 fail: 'Operação falhou'
