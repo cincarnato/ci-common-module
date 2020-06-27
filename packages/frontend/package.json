@@ -24,11 +24,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@mdx-js/loader": "^1.6.6",
     "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
-    "@storybook/addon-docs": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/vue": "^5.3.19",
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -36,13 +37,12 @@
     "@vue/cli-plugin-unit-jest": "^4.4.4",
     "@vue/cli-service": "~4.4.0",
     "@vue/test-utils": "^1.0.3",
-    "vue-template-compiler": "^2.6.11",
-    "vue-cli-plugin-vuetify": "^2.0.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
-    "@mdx-js/loader": "^1.6.6"
+    "vue-cli-plugin-vuetify": "^2.0.6",
+    "vue-template-compiler": "^2.6.11"
   }
 }
