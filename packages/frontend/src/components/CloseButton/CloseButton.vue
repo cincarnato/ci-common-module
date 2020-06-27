@@ -4,8 +4,9 @@
             outlined
             color="grey"
             v-on="$listeners"
-            v-t="text"
+
     >
+        {{$t(text)}}
     </v-btn>
 </template>
 
