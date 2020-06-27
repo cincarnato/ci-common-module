@@ -2,6 +2,10 @@
     <sloty>
         Learn Slot
 
+        <div>
+            {{}}
+        </div>
+
         <template v-slot:header="header">
             Titulo: {{header.title}}
         </template>
