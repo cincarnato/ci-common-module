@@ -3,6 +3,7 @@ const baseMessages = {
         common: {
             name: 'Name',
             lastname: 'Lastname',
+            required: 'Required',
             search: 'Search',
             cancel: 'Cancel',
             loading: 'Loading',
@@ -38,6 +39,7 @@ const baseMessages = {
         common: {
             name: 'Nombre',
             lastname: 'Apellido',
+            required: 'Requerido',
             search: 'Buscar',
             cancel: 'Cancelar',
             loading: 'Cargando',
@@ -73,7 +75,8 @@ const baseMessages = {
     pt: {
         common: {
             name: 'Nome',
-            lastname: 'Lastname',
+            lastname: 'Último nome',
+            required: 'Requeridos',
             search: 'Procurar',
             cancel: 'Cancelar',
             loading: 'Carregando',

@@ -16,6 +16,9 @@ import CrudUpdate from "./components/Crud/CrudUpdate";
 import CrudDelete from "./components/Crud/CrudDelete";
 import CrudShow from "./components/Crud/CrudShow";
 
+import InputErrors from "./mixins/InputErrors";
+import InputErrorsByProps from "./mixins/InputErrorsByProps";
+import RequiredRole from "./mixins/RequiredRole";
 
 export {
     //Components
@@ -37,6 +40,10 @@ export {
     CrudCreate,
     CrudUpdate,
     CrudDelete,
-    CrudShow
+    CrudShow,
 
+    //Mixins
+    InputErrors,
+    InputErrorsByProps,
+    RequiredRole
 }
