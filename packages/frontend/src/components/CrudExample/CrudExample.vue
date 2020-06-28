@@ -3,14 +3,14 @@
                 subtitle="Some subtitle"
     >
         <template v-slot:list>
-            <crud-list         :items="items"
-                               :totalItems="totalItems"
-                               :loading="loading"
-                               :headers="headers"
-                               @fetch="fetch"
-                               @update="update"
-                               @delete="remove"
-                               @show="show"
+            <crud-list :items="items"
+                       :totalItems="totalItems"
+                       :loading="loading"
+                       :headers="headers"
+                       @fetch="fetch"
+                       @update="update"
+                       @delete="remove"
+                       @show="show"
             />
         </template>
 
@@ -38,6 +38,8 @@
 
         <add-button @click="creating=true"></add-button>
 
+        <snackbar :message="flash" @end="flash=null"></snackbar>
+
     </CrudLayout>
 </template>
 
@@ -50,10 +52,12 @@
     import CrudExampleList from "./CrudExampleCustomList";
     import CrudExampleShow from "./CrudExampleShow";
     import CrudList from "../Crud/CrudList";
+    import Snackbar from "../Snackbar/Snackbar";
 
     export default {
         name: "CrudExample",
         components: {
+            Snackbar,
             CrudList,
             CrudLayout,
             CrudExampleList,
@@ -79,7 +83,8 @@
                 headers: [
                     {text: this.$t('common.name'), value: 'name'},
                     {text: this.$t('common.lastname'), value: 'lastname'},
-                ]
+                ],
+                flash: null
             }
         },
         mounted() {
@@ -93,7 +98,7 @@
                 this.loading = true
                 setTimeout(() => {
                     console.log("setTimeout")
-                    let a = [{id: 1, name: 'john', lastname:'doe'}, {id: 2, name: 'jane', lastname:'doe'}]
+                    let a = [{id: 1, name: 'john', lastname: 'doe'}, {id: 2, name: 'jane', lastname: 'doe'}]
                     if (options && options.search) {
                         this.items = a.filter(i => i.name.toLowerCase().indexOf(options.search) !== -1)
                     } else {
@@ -104,11 +109,11 @@
                 }, 1500)
 
             },
-            clearOperations(){
-              this.showing = false
-              this.updating = false
-              this.deleting = false
-              this.creating = false
+            clearOperations() {
+                this.showing = false
+                this.updating = false
+                this.deleting = false
+                this.creating = false
             },
             remove(item) {
                 this.clearOperations()
@@ -125,22 +130,25 @@
                 this.item = item
                 this.showing = true
             },
-            onCreated(item){
+            onCreated(item) {
                 this.items.push(item)
                 this.totalItems++
                 this.clearOperations()
+                this.flash = this.$t('common.created')
             },
-            onUpdated(item){
+            onUpdated(item) {
                 console.log(item)
                 let index = this.items.findIndex(i => i.id == item.id)
-                this.$set(this.items,index,item)
+                this.$set(this.items, index, item)
                 this.clearOperations()
+                this.flash = this.$t('common.updated')
             },
-            onDeleted(item){
+            onDeleted(item) {
                 let index = this.items.findIndex(i => i.id == item.id)
-                this.items.splice(index,1)
+                this.items.splice(index, 1)
                 this.totalItems--
                 this.clearOperations()
+                this.flash = this.$t('common.deleted')
             }
         }
     }

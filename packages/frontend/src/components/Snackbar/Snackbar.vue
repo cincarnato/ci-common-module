@@ -5,14 +5,12 @@
             :timeout="timeout"
             bottom
     >
-        {{message}}
-        <v-btn
-                dark
-                text
-                @click="snackbar = false"
-        >
+
+        <v-btn dark text @click="snackbar = false">
             <v-icon>close</v-icon>
         </v-btn>
+
+        {{message}}
     </v-snackbar>
 </template>
 
@@ -22,8 +20,8 @@
         name: "Snackbar",
         props: {
             message: String,
-            color: {type:String, default: "success"},
-            timeout: {type:Number, default: 5000}
+            color: {type: String, default: "success"},
+            timeout: {type: Number, default: 4000}
         },
         data() {
             return {
@@ -36,7 +34,13 @@
                     this.snackbar = true
                 }
 
-            }
+            },
+            snackbar: function (value) {
+                if (value === false) {
+                    this.$emit('end')
+                }
+
+            },
         }
     }
 </script>
