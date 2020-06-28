@@ -1,6 +1,6 @@
 export default {
     props: {
-        inputErrors: {type: Array, default: () => []}
+        inputErrors: {type: Object, default: () => { return {} } }
     },
     computed: {
         hasInputErrors() {
