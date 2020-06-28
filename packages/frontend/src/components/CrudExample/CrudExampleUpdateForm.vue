@@ -5,20 +5,18 @@
                  @update="update"
                  @close="$emit('close')"
     >
-        <v-form>
-            <v-text-field label="Name"></v-text-field>
-            <p>{{updateConfirm}}</p>
-        </v-form>
+        <crud-example-form v-model="form"/>
     </crud-update>
 
 </template>
 
 <script>
     import CrudUpdate from "../Crud/CrudUpdate/CrudUpdate";
+    import CrudExampleForm from "./CrudExampleForm";
 
     export default {
         name: "CrudExampleUpdateForm",
-        components: {CrudUpdate},
+        components: {CrudExampleForm, CrudUpdate},
         props: {
             open: {type: Boolean, default: false},
             item: {type: Object}
@@ -29,7 +27,9 @@
                 errorMessage: "Some Error",
                 updateConfirm: false,
                 form: {
-                    name: this.item.name
+                    id: this.item.id,
+                    name: this.item.name,
+                    lastname: this.item.lastname
                 }
             }
         },
@@ -40,6 +40,7 @@
                 setTimeout(() => {
                     this.updateConfirm = true
                     this.loading = false
+                    this.$emit('updated',this.form)
                 }, 1000)
             }
         }

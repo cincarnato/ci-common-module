@@ -29,3 +29,9 @@ export const danger = () => ({
     template: '<ToolbarDialog :danger="true" />',
     i18n
 })
+
+export const info = () => ({
+    components: {ToolbarDialog},
+    template: '<ToolbarDialog :info="true" />',
+    i18n
+})

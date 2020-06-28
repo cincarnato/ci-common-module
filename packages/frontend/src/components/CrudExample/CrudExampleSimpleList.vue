@@ -14,7 +14,7 @@
     import EditButton from "../Crud/EditButton/EditButton";
     import DeleteButton from "../Crud/DeleteButton/DeleteButton";
     export default {
-        name: "CrudExampleList",
+        name: "CrudExampleSimpleList",
         components: {DeleteButton, EditButton, ShowButton},
         data(){
             return {

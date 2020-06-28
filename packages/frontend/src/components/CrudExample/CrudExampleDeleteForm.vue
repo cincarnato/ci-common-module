@@ -6,7 +6,6 @@
                  @close="$emit('close')"
     >
         <h4>{{$t('common.areYouSureDeleteRecord')}}</h4>
-        <p>{{deleteConfirm}}</p>
     </crud-delete>
 
 </template>
@@ -35,6 +34,7 @@
                 setTimeout(()=>{
                     this.deleteConfirm = true
                     this.loading= false
+                    this.$emit('deleted',this.item)
                 },1000)
             }
         }

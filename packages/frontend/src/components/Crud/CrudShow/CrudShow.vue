@@ -3,6 +3,7 @@
         <v-card>
 
             <toolbar-dialog
+                    info
                     :title="title"
                     @close="$emit('close')"
             />

@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar flat class="mb-2" :color="danger?'red':'primary'">
+    <v-toolbar flat class="mb-2" :color="danger?'red':(info?'info':'primary')">
         <v-toolbar-title :class="danger?'white--text':'onPrimary--text'" v-t="title"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>
@@ -15,7 +15,8 @@
         name: "ToolbarDialog",
         props: {
             title: {type: String, default: "common.title"},
-            danger: {type:Boolean, default:false}
+            danger: {type: Boolean, default: false},
+            info: {type: Boolean, default: false}
         }
     }
 </script>

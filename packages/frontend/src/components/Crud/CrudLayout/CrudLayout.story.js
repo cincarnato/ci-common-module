@@ -19,7 +19,7 @@ export default {
 
 const data = []
 
-export const normal = () => ({
+export const crudLayout = () => ({
     components: {CrudLayout},
     props: {
         title: {default: text('creating',"common.title")},

@@ -1,6 +1,8 @@
 const baseMessages = {
     en: {
         common: {
+            name: 'Name',
+            lastname: 'Lastname',
             search: 'Search',
             cancel: 'Cancel',
             loading: 'Loading',
@@ -31,6 +33,8 @@ const baseMessages = {
     },
     es: {
         common: {
+            name: 'Nombre',
+            lastname: 'Apellido',
             search: 'Buscar',
             cancel: 'Cancelar',
             loading: 'Cargando',
@@ -62,6 +66,8 @@ const baseMessages = {
     },
     pt: {
         common: {
+            name: 'Nome',
+            lastname: 'Lastname',
             search: 'Procurar',
             cancel: 'Cancelar',
             loading: 'Carregando',

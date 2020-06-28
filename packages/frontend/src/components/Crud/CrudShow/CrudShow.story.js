@@ -1,4 +1,4 @@
-import CrudCreate from "./CrudCreate"
+import CrudShow from "./CrudShow"
 import i18n from "../../../i18n"
 
 const decorator = () => `
@@ -11,13 +11,18 @@ const decorator = () => `
         </v-container>`
 
 export default {
-    title: "Crud|CrudCreate",
+    title: "Crud|CrudShow",
     decorators: [decorator]
 };
 
 
-export const crudCreate = () => ({
-    components: {CrudCreate},
-    template: '<CrudCreate :open="true">YOUR FORM</CrudCreate>',
+const item = {id: 1, name: 'john', lastname: 'doe'}
+
+export const crudShow = () => ({
+    components: {CrudShow},
+    props: {
+        item: {default: item}
+    },
+    template: '<CrudShow :open="true" :item="item" />',
     i18n
 })

@@ -3,7 +3,7 @@
             small
             color="red"
             class="mx-1"
-            @click="$emit('delete', item)"
+            v-on="$listeners"
     >
         delete
     </v-icon>
@@ -11,10 +11,7 @@
 
 <script>
     export default {
-        name: "DeleteButton",
-        props: {
-            item: {type: Object}
-        }
+        name: "DeleteButton"
     }
 </script>
 

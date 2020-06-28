@@ -3,7 +3,7 @@
             small
             color="primary"
             class="mx-1"
-            @click="$emit('edit', item)"
+            v-on="$listeners"
     >
         edit
     </v-icon>
@@ -11,10 +11,7 @@
 
 <script>
     export default {
-        name: "EditButton",
-        props: {
-            item: {type: Object}
-        }
+        name: "EditButton"
     }
 </script>
 

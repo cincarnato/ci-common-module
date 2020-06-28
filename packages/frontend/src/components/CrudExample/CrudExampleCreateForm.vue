@@ -4,21 +4,22 @@
                  :errorMessage="errorMessage"
                  @create="create"
                  @close="$emit('close')">
-        <v-form>
-            <v-text-field label="Name"></v-text-field>
-            <p>{{createConfirm}}</p>
-        </v-form>
+
+        <crud-example-form v-model="form"/>
+
     </crud-create>
 
 </template>
 
 <script>
     import CrudCreate from "../Crud/CrudCreate/CrudCreate";
+    import CrudExampleForm from "./CrudExampleForm";
+
     export default {
         name: "CrudExampleCreateForm",
-        components: {CrudCreate},
-        props:{
-          open: {type:Boolean, default:false}
+        components: {CrudExampleForm, CrudCreate},
+        props: {
+            open: {type: Boolean, default: false}
         },
         data() {
             return {
@@ -26,17 +27,20 @@
                 errorMessage: "Some Error",
                 createConfirm: false,
                 form: {
-                    name: null
+                    id: null,
+                    name: null,
+                    lastname: null,
                 }
             }
         },
         methods: {
             create() {
-                this.loading=true
-                setTimeout(()=>{
+                this.loading = true
+                setTimeout(() => {
                     this.createConfirm = true
-                    this.loading= false
-                },1000)
+                    this.loading = false
+                    this.$emit('created', this.form)
+                }, 1000)
 
             }
         }

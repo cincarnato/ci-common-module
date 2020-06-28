@@ -3,7 +3,7 @@
             small
             color="primary"
             class="mx-1"
-            @click="$emit('show', item)"
+            v-on="$listeners"
     >
         search
     </v-icon>
@@ -11,10 +11,7 @@
 
 <script>
     export default {
-        name: "ShowButton",
-        props: {
-            item: {type: Object}
-        }
+        name: "ShowButton"
     }
 </script>
 
