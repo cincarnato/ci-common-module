@@ -2,27 +2,22 @@
     <CrudLayout title="Some Entity Management"
                 subtitle="Some subtitle"
     >
-
         <template v-slot:list>
-            <ul>
-                <li>1- One <show-button @show="showing=true" /> <edit-button @edit="updating=true" /> <delete-button @delete="deleting=true" /></li>
-                <li>2- Two <show-button @show="showing=true" /> <edit-button @edit="updating=true" /> <delete-button @delete="deleting=true" /></li>
-                <li>3- Three <show-button @show="showing=true" /> <edit-button @edit="updating=true" /> <delete-button @delete="deleting=true" /></li>
-            </ul>
+            <crud-example-list @update="update"
+                               @delete="remove"
+                               @show="show"
+            />
         </template>
 
-        <template>
-            My Create Form
-        </template>
+        <crud-example-create-form v-if="creating" :open="creating" @close="creating=false"/>
 
+        <crud-example-update-form v-if="updating" :item="item" :open="updating" @close="updating=false"/>
 
-        <crud-example-update-form :open="updating" @close="updating=false" />
+        <crud-example-delete-form v-if="deleting"  :item="item" :open="deleting" @close="deleting=false"/>
 
+        <crud-example-show v-if="showing" :open="showing" :item="item"  @close="showing=false" />
 
-
-        <template>
-            My Show Data
-        </template>
+        <add-button @click="creating=true"></add-button>
 
     </CrudLayout>
 </template>
@@ -34,27 +29,45 @@
     import CloseButton from "../CloseButton/CloseButton";
     import ShowButton from "../Crud/ShowButton/ShowButton";
     import CrudExampleUpdateForm from "./CrudExampleUpdateForm";
+    import CrudExampleCreateForm from "./CrudExampleCreateForm";
+    import CrudExampleDeleteForm from "./CrudExampleDeleteForm";
+    import AddButton from "../Crud/AddButton/AddButton";
+    import CrudExampleLayout from "../CrudExampleLayout/CrudExampleLayout";
+    import CrudExampleList from "./CrudExampleList";
+    import CrudExampleShow from "./CrudExampleShow";
+
     export default {
         name: "CrudExample",
-        components: {CrudExampleUpdateForm, ShowButton, CloseButton, DeleteButton, EditButton, CrudLayout},
-        data(){
+        components: {
+            CrudExampleShow,
+            CrudExampleList,
+            AddButton,
+            CrudExampleDeleteForm,
+            CrudExampleCreateForm,
+            CrudExampleUpdateForm,
+            CrudLayout
+        },
+        data() {
             return {
                 creating: false,
                 updating: false,
                 deleting: false,
-                showing: false
+                showing: false,
+                item: null,
             }
         },
         methods: {
-            createAction(){
-                console.log("update")
+            remove(item){
+                this.item = item
+                this.deleting = true
             },
-            updateAction(){
-                console.log("update")
-                this.$refs.cu.update()
+            update(item){
+                this.item = item
+                this.updating = true
             },
-            deleteAction(){
-                console.log("delete")
+            show(item){
+                this.item = item
+                this.showing = true
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar flat :color="danger?'red':'primary'">
+    <v-toolbar flat class="mb-2" :color="danger?'red':'primary'">
         <v-toolbar-title :class="danger?'white--text':'onPrimary--text'" v-t="title"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items>

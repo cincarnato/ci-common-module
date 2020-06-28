@@ -20,7 +20,7 @@
             <v-card-actions>
                 <close-button @click="$emit('close')"></close-button>
                 <v-spacer></v-spacer>
-                <submit-button @click="$emit('create')"></submit-button>
+                <submit-button :loading="loading" @click="$emit('create')"></submit-button>
             </v-card-actions>
 
         </v-card>
@@ -39,6 +39,7 @@
         props: {
             title: {type: String, default: 'common.create'},
             open: {type: Boolean, default: false},
+            loading: {type: Boolean, default: false},
             errorMessage: {type: String, default: null},
         }
     }

@@ -17,7 +17,7 @@
             <v-card-actions>
                 <close-button @click="$emit('close')"></close-button>
                 <v-spacer />
-                <submit-button danger @click="$emit('update')" text="common.delete" ></submit-button>
+                <submit-button :loading="loading" danger @click="$emit('delete')" text="common.delete" ></submit-button>
             </v-card-actions>
 
 
@@ -35,7 +35,8 @@
         components: {SubmitButton, CloseButton, ToolbarDialog},
         props: {
             title: {type: String, default: 'common.delete'},
-            open: {type: Boolean, default: false}
+            open: {type: Boolean, default: false},
+            loading: {type: Boolean, default: false}
         }
     }
 </script>
