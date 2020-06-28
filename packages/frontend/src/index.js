@@ -21,6 +21,8 @@ import InputErrorsByProps from "./mixins/InputErrorsByProps";
 import RequiredRule from "./mixins/RequiredRule";
 import ClientError from './errors/ClientError'
 
+import i18nMessages from './i18n/messages'
+
 export {
     //Components
     SubmitButton,
@@ -49,5 +51,8 @@ export {
     RequiredRule,
 
     //Errors
-    ClientError
+    ClientError,
+
+    //i18n
+    i18nMessages
 }
