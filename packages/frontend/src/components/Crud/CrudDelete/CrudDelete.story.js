@@ -1,5 +1,5 @@
-import LearnSlot from "./LearnSlot"
-import i18n from "../../i18n"
+import CrudDelete from "./CrudDelete"
+import i18n from "../../../i18n"
 
 const decorator = () => `
         <v-container fluid>
@@ -11,15 +11,12 @@ const decorator = () => `
         </v-container>`
 
 export default {
-    title: "Components|LearnSlot",
+    title: "Crud|CrudDelete",
     decorators: [decorator]
 };
 
-
-const data = []
-
-export const normal = () => ({
-    components: {LearnSlot},
-    template: '<LearnSlot />',
+export const crudDelete = () => ({
+    components: {CrudDelete},
+    template: '<CrudDelete :open="true" >Your text</CrudDelete>',
     i18n
 })

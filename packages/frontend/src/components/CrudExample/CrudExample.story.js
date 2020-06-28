@@ -11,7 +11,7 @@ const decorator = () => `
         </v-container>`
 
 export default {
-    title: "Components|Crud Example",
+    title: "Crud Example|Crud",
     decorators: [decorator]
 };
 

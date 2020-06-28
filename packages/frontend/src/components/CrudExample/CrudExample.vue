@@ -23,29 +23,24 @@
 </template>
 
 <script>
-    import CrudLayout from "../CrudLayout/CrudLayout";
-    import EditButton from "../Crud/EditButton";
-    import DeleteButton from "../Crud/DeleteButton";
-    import CloseButton from "../CloseButton/CloseButton";
-    import ShowButton from "../Crud/ShowButton/ShowButton";
+    import CrudLayout from "../Crud/CrudLayout";
     import CrudExampleUpdateForm from "./CrudExampleUpdateForm";
     import CrudExampleCreateForm from "./CrudExampleCreateForm";
     import CrudExampleDeleteForm from "./CrudExampleDeleteForm";
     import AddButton from "../Crud/AddButton/AddButton";
-    import CrudExampleLayout from "../CrudExampleLayout/CrudExampleLayout";
     import CrudExampleList from "./CrudExampleList";
     import CrudExampleShow from "./CrudExampleShow";
 
     export default {
         name: "CrudExample",
         components: {
-            CrudExampleShow,
+            CrudLayout,
             CrudExampleList,
-            AddButton,
-            CrudExampleDeleteForm,
             CrudExampleCreateForm,
             CrudExampleUpdateForm,
-            CrudLayout
+            CrudExampleDeleteForm,
+            CrudExampleShow,
+            AddButton
         },
         data() {
             return {

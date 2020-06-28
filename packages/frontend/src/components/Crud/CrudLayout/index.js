@@ -1,4 +1,4 @@
-import CrudLayout from "./CrudLayout.story";
+import CrudLayout from "./CrudLayout";
 
 export {CrudLayout}
 export default CrudLayout

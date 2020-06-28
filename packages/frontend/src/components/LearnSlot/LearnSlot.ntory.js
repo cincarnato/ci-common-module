@@ -1,4 +1,4 @@
-import CrudExampleLayout from "./CrudExampleLayout"
+import LearnSlot from "./LearnSlot"
 import i18n from "../../i18n"
 
 const decorator = () => `
@@ -11,13 +11,15 @@ const decorator = () => `
         </v-container>`
 
 export default {
-    title: "Components|Crud Example Layout",
+    title: "Learn|LearnSlot",
     decorators: [decorator]
 };
 
 
+const data = []
+
 export const normal = () => ({
-    components: {CrudExampleLayout},
-    template: '<CrudExampleLayout />',
+    components: {LearnSlot},
+    template: '<LearnSlot />',
     i18n
 })
