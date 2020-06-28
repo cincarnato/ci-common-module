@@ -18,7 +18,7 @@ import CrudShow from "./components/Crud/CrudShow";
 
 import InputErrors from "./mixins/InputErrors";
 import InputErrorsByProps from "./mixins/InputErrorsByProps";
-import RequiredRole from "./mixins/RequiredRule";
+import RequiredRule from "./mixins/RequiredRule";
 import ClientError from './errors/ClientError'
 
 export {
@@ -46,7 +46,7 @@ export {
     //Mixins
     InputErrors,
     InputErrorsByProps,
-    RequiredRole,
+    RequiredRule,
 
     //Errors
     ClientError
