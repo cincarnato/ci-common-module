@@ -4,6 +4,7 @@ import Loading from "./components/Loading";
 import Snackbar from "./components/Snackbar";
 import ShowField from "./components/ShowField";
 import SearchInput from "./components/SearchInput";
+import ToolbarDialog from "./components/ToolbarDialog";
 
 import AddButton from "./components/Crud/AddButton";
 import EditButton from "./components/Crud/EditButton";
@@ -32,6 +33,7 @@ export {
     Snackbar,
     ShowField,
     SearchInput,
+    ToolbarDialog,
 
     //Crud Buttons
     AddButton,
