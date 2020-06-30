@@ -29,6 +29,8 @@ const baseMessages = {
             import: 'Import',
             title:'Title',
             subtitle:'Subtitle',
+            true: 'True',
+            false: 'False',
             operation: {
                 success: 'Operation success',
                 fail: 'Operation fail'
@@ -65,6 +67,8 @@ const baseMessages = {
             import: 'Importar',
             title:'Titulo',
             subtitle:'Subtitulo',
+            true: 'Verdadero',
+            false: 'Falso',
             operation: {
                 success: 'Operación exitosa',
                 fail: 'Operación fallida'
@@ -102,6 +106,8 @@ const baseMessages = {
             import: 'Importar',
             title:'Título',
             subtitle:'Subtítulo',
+            true: 'Verdade',
+            false: 'Falso',
             operation: {
                 success: 'Operação bem sucedida',
                 fail: 'Operação falhou'
