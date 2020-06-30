@@ -3,7 +3,7 @@
             :name="name"
             :ref="name"
             :color="danger?'red':'secondary'"
-            :class="danger?'white--text':'onSecondary--text--text'"
+            :class="danger?'white--text':'onSecondary--text'"
             v-on="$listeners"
             :loading="loading"
             :disabled="disabled"
