@@ -15,9 +15,8 @@
             <v-divider></v-divider>
 
             <v-card-actions>
-                <close-button @click="$emit('close')"></close-button>
-                <v-spacer />
                 <submit-button :loading="loading" danger @click="$emit('delete')" text="common.delete" ></submit-button>
+                <close-button @click="$emit('close')"></close-button>
             </v-card-actions>
 
 

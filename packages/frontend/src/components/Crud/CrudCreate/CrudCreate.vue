@@ -18,9 +18,8 @@
             <v-divider></v-divider>
 
             <v-card-actions>
-                <close-button @click="$emit('close')"></close-button>
-                <v-spacer></v-spacer>
                 <submit-button :loading="loading" @click="$emit('create')"></submit-button>
+                <close-button @click="$emit('close')"></close-button>
             </v-card-actions>
 
         </v-card>

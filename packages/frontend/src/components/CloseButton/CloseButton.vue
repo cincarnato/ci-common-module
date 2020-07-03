@@ -1,8 +1,7 @@
 <template>
     <v-btn
-            tile
-            outlined
-            color="grey"
+            color="grey darken-1"
+            dark
             v-on="$listeners"
 
     >
@@ -14,7 +13,7 @@
     export default {
         name: "CloseButton",
         props: {
-            text: {type: String, default: "common.close"},
+            text: {type: String, default: "common.cancel"},
             loading: {type: Boolean, default: false}
         }
     }
