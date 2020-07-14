@@ -10,7 +10,7 @@
             <v-icon>close</v-icon>
         </v-btn>
 
-        {{message}}
+        {{getMessage}}
     </v-snackbar>
 </template>
 
@@ -19,6 +19,7 @@
     export default {
         name: "Snackbar",
         props: {
+            value: String,
             message: String,
             color: {type: String, default: "success"},
             timeout: {type: Number, default: 4000}
@@ -28,7 +29,18 @@
                 snackbar: false,
             }
         },
+        computed:{
+            getMessage(){
+                return this.value?this.value:this.message
+            }
+        },
         watch: {
+            value: function (value) {
+                if (value) {
+                    this.snackbar = true
+                }
+
+            },
             message: function (value) {
                 if (value) {
                     this.snackbar = true
@@ -38,6 +50,7 @@
             snackbar: function (value) {
                 if (value === false) {
                     this.$emit('end')
+                    this.$emit('input', null)
                 }
 
             },
