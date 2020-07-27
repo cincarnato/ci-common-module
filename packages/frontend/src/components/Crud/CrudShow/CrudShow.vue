@@ -15,7 +15,7 @@
             <v-divider />
 
             <v-card-actions>
-
+                <v-spacer></v-spacer>
                 <close-button @click="$emit('close')" ></close-button>
             </v-card-actions>
         </v-card>

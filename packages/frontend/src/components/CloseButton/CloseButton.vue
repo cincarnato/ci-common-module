@@ -1,7 +1,7 @@
 <template>
     <v-btn
-            color="grey darken-1"
-            dark
+            :color="color"
+            text
             v-on="$listeners"
 
     >
@@ -14,7 +14,8 @@
         name: "CloseButton",
         props: {
             text: {type: String, default: "common.cancel"},
-            loading: {type: Boolean, default: false}
+            loading: {type: Boolean, default: false},
+            color: {type: String, default: 'primary'}
         }
     }
 </script>
