@@ -61,9 +61,9 @@ Vue.use(Vuetify, {
 });
 
 let colors = {
-    primary: '#3F51B5',
+    primary: '#2196F3',
     onPrimary: '#FFFFFF',
-    secondary: '#1565C0',
+    secondary: '#3F51B5',
     onSecondary: '#FFFFFF'
 }
 

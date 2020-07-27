@@ -2,7 +2,7 @@
     <v-btn
             :name="name"
             :ref="name"
-            :color="danger?'red':'secondary'"
+            :color="danger?'red':color"
             :class="danger?'white--text':'onSecondary--text'"
             v-on="$listeners"
             :loading="loading"
@@ -20,7 +20,8 @@
             loading: {type: Boolean, default: false},
             disabled: {type: Boolean, default: false},
             danger: {type: Boolean, default: false},
-            name: {type: String, default: 'submit'}
+            name: {type: String, default: 'submit'},
+            color: {type: String, default: 'secondary'}
         }
     }
 </script>

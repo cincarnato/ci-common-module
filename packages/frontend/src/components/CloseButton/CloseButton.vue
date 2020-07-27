@@ -15,7 +15,7 @@
         props: {
             text: {type: String, default: "common.cancel"},
             loading: {type: Boolean, default: false},
-            color: {type: String, default: 'primary'}
+            color: {type: String, default: 'secondary'}
         }
     }
 </script>
