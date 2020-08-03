@@ -1,5 +1,5 @@
 <template>
-    <v-dialog v-model="open">
+    <v-dialog v-model="value">
         <v-card>
             <toolbar-dialog
                     :title="title"
@@ -20,7 +20,7 @@
         name: "SimpleDialog",
         components: {ToolbarDialog},
         props: {
-            open: {type: Boolean, default: false},
+            value: {type: Boolean, default: false},
             title: {type: String, default: ''},
 
         }
